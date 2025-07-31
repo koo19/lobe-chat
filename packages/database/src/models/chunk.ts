@@ -2,7 +2,7 @@ import { cosineDistance, count, sql } from 'drizzle-orm';
 import { and, asc, desc, eq, inArray, isNull } from 'drizzle-orm/expressions';
 import { chunk } from 'lodash-es';
 
-import { LobeChatDatabase } from '@/database/type';
+import { LobeChatDatabase } from '../type';
 import { ChunkMetadata, FileChunk } from '@/types/chunk';
 
 import {

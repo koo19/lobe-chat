@@ -6,8 +6,8 @@ import {
   evalDatasets,
   evalEvaluation,
   evaluationRecords,
-} from '@/database/schemas';
-import { serverDB } from '@/database/server';
+} from '../../../schemas';
+import { serverDB } from '../../../core/db-adaptor';
 import { EvalEvaluationStatus, RAGEvalEvaluationItem } from '@/types/eval';
 
 export class EvalEvaluationModel {

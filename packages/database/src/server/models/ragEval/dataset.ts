@@ -1,8 +1,9 @@
 import { and, desc, eq } from 'drizzle-orm/expressions';
 
-import { NewEvalDatasetsItem, evalDatasets } from '@/database/schemas';
-import { serverDB } from '@/database/server';
 import { RAGEvalDataSetItem } from '@/types/eval';
+
+import { serverDB } from '../../../core/db-adaptor';
+import { NewEvalDatasetsItem, evalDatasets } from '../../../schemas';
 
 export class EvalDatasetModel {
   private userId: string;

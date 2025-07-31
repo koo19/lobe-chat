@@ -1,7 +1,7 @@
 import { count } from 'drizzle-orm';
 import { and, eq } from 'drizzle-orm/expressions';
 
-import { LobeChatDatabase } from '@/database/type';
+import { LobeChatDatabase } from '../type';
 
 import { NewEmbeddingsItem, embeddings } from '../schemas';
 
