@@ -35,9 +35,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'moonshotai/kimi-k2-instruct',
     maxOutput: 16_384,
     pricing: {
-      input: 1,
-      output: 3,
-    },
+          units: [
+            { name: 'TextInput', rate: 1, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 3, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     releasedAt: '2025-07-11',
     type: 'chat',
   },
@@ -48,9 +50,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'meta-llama/llama-4-scout-17b-16e-instruct',
     maxOutput: 8192,
     pricing: {
-      input: 0.11,
-      output: 0.34,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.11, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.34, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -63,9 +67,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'meta-llama/llama-4-maverick-17b-128e-instruct',
     maxOutput: 8192,
     pricing: {
-      input: 0.2,
-      output: 0.6,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.2, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.6, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -77,9 +83,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'qwen/qwen3-32b',
     maxOutput: 40_960,
     pricing: {
-      input: 0.29,
-      output: 0.59,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.29, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.59, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -92,9 +100,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'deepseek-r1-distill-llama-70b',
     maxOutput: 131_072,
     pricing: {
-      input: 0.75, // 0.75 - 5.00
-      output: 0.99, // 0.99 - 5.00
-    },
+          units: [
+            { name: 'TextInput', rate: 0.75, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.99, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -107,9 +117,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'gemma2-9b-it',
     maxOutput: 8192,
     pricing: {
-      input: 0.2,
-      output: 0.2,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.2, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.2, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -123,9 +135,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'llama-3.1-8b-instant',
     maxOutput: 131_072,
     pricing: {
-      input: 0.05,
-      output: 0.08,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.05, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.08, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -139,9 +153,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'llama-3.3-70b-versatile',
     maxOutput: 32_768,
     pricing: {
-      input: 0.59,
-      output: 0.79,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.59, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.79, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -150,9 +166,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'mistral-saba-24b',
     maxOutput: 32_768,
     pricing: {
-      input: 0.79,
-      output: 0.79,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.79, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.79, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
@@ -161,9 +179,11 @@ const groqChatModels: AIChatModelCard[] = [
     id: 'meta-llama/llama-guard-4-12b',
     maxOutput: 1024,
     pricing: {
-      input: 0.2,
-      output: 0.2,
-    },
+          units: [
+            { name: 'TextInput', rate: 0.2, strategy: 'fixed', unit: 'MillionTokens' },
+            { name: 'TextOutput', rate: 0.2, strategy: 'fixed', unit: 'MillionTokens' }
+          ]
+        },
     type: 'chat',
   },
   {
