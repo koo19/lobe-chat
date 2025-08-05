@@ -13,9 +13,26 @@ const OpenAI: ModelProviderCard = {
       id: 'gpt-4.1-mini',
       maxOutput: 32_768,
       pricing: {
-        cachedInput: 0.1,
-        input: 0.4,
-        output: 1.6,
+        units: [
+          {
+            name: 'CachedTextInput',
+            rate: 0.1,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextInput',
+            rate: 0.4,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 1.6,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2025-04-14',
       vision: true,
@@ -29,8 +46,20 @@ const OpenAI: ModelProviderCard = {
       id: 'o1-mini',
       maxOutput: 65_536,
       pricing: {
-        input: 3,
-        output: 12,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 3,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 12,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-09-12',
     },
@@ -43,8 +72,20 @@ const OpenAI: ModelProviderCard = {
       id: 'o1-2024-12-17',
       maxOutput: 100_000,
       pricing: {
-        input: 15,
-        output: 60,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 15,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 60,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-12-17',
       vision: true,
@@ -58,8 +99,20 @@ const OpenAI: ModelProviderCard = {
       id: 'o1-preview',
       maxOutput: 32_768,
       pricing: {
-        input: 15,
-        output: 60,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 15,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 60,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-09-12',
     },
@@ -73,8 +126,20 @@ const OpenAI: ModelProviderCard = {
       id: 'gpt-4o-mini',
       maxOutput: 16_385,
       pricing: {
-        input: 0.15,
-        output: 0.6,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 0.15,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 0.6,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       vision: true,
     },
@@ -87,8 +152,20 @@ const OpenAI: ModelProviderCard = {
       id: 'gpt-4o-mini-search-preview',
       maxOutput: 16_384,
       pricing: {
-        input: 0.15,
-        output: 0.6,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 0.15,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 0.6,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-12-01',
       vision: true,
@@ -102,8 +179,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4o-2024-11-20',
       pricing: {
-        input: 2.5,
-        output: 10,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 2.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-11-20',
       vision: true,
@@ -117,8 +206,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4o',
       pricing: {
-        input: 2.5,
-        output: 10,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 2.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       vision: true,
     },
@@ -130,8 +231,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4o-2024-08-06',
       pricing: {
-        input: 2.5,
-        output: 10,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 2.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-08-06',
       vision: true,
@@ -144,8 +257,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4o-2024-05-13',
       pricing: {
-        input: 5,
-        output: 15,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 15,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       releasedAt: '2024-05-13',
       vision: true,
@@ -158,8 +283,20 @@ const OpenAI: ModelProviderCard = {
       enabled: true,
       id: 'chatgpt-4o-latest',
       pricing: {
-        input: 5,
-        output: 15,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 15,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       vision: true,
     },
@@ -171,8 +308,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-turbo',
       pricing: {
-        input: 10,
-        output: 30,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       vision: true,
     },
@@ -184,8 +333,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-turbo-2024-04-09',
       pricing: {
-        input: 10,
-        output: 30,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
       vision: true,
     },
@@ -197,8 +358,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-turbo-preview',
       pricing: {
-        input: 10,
-        output: 30,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -209,8 +382,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-0125-preview',
       pricing: {
-        input: 10,
-        output: 30,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -221,8 +406,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-1106-preview',
       pricing: {
-        input: 10,
-        output: 30,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 10,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -233,8 +430,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4',
       pricing: {
-        input: 30,
-        output: 60,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 60,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -245,8 +454,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-0613',
       pricing: {
-        input: 30,
-        output: 60,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 30,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 60,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -258,8 +479,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-32k',
       pricing: {
-        input: 60,
-        output: 120,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 60,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 120,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -271,8 +504,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-4-32k-0613',
       pricing: {
-        input: 60,
-        output: 120,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 60,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 120,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -283,8 +528,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-3.5-turbo',
       pricing: {
-        input: 0.5,
-        output: 1.5,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 0.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 1.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -295,8 +552,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-3.5-turbo-0125',
       pricing: {
-        input: 0.5,
-        output: 1.5,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 0.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 1.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -307,8 +576,20 @@ const OpenAI: ModelProviderCard = {
       functionCall: true,
       id: 'gpt-3.5-turbo-1106',
       pricing: {
-        input: 1,
-        output: 2,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 1,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 2,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
     {
@@ -318,8 +599,20 @@ const OpenAI: ModelProviderCard = {
       displayName: 'GPT-3.5 Turbo Instruct',
       id: 'gpt-3.5-turbo-instruct',
       pricing: {
-        input: 1.5,
-        output: 2,
+        units: [
+          {
+            name: 'TextInput',
+            rate: 1.5,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+          {
+            name: 'TextOutput',
+            rate: 2,
+            strategy: 'fixed',
+            unit: 'MillionTokens',
+          },
+        ],
       },
     },
   ],
